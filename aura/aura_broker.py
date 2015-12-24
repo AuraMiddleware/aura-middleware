@@ -2,7 +2,10 @@
 
 import paho.mqtt.client as mqtt
 from time import sleep
-from zeroless import (Server, Client)
+from zeroless import Client
+
+zmq_client = Client()
+zmq_client.connect_local(port=12345)
 
 class AuraBroker():
     def work(self):
@@ -14,7 +17,8 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("gateways/test")
 
 def on_message(client, userdata, msg):
-    print(msg.topic+" "+str(msg.payload))
+    push = zmq_client.push()
+    push(msg.payload)
 
 client = mqtt.Client()
 client.on_connect = on_connect
