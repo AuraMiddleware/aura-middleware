@@ -1,0 +1,8 @@
+{
+  "scenario":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotScenario#",
+  "DiscreteScenario":"scenario:DiscreteScenario",
+  "value":"scenario:Value",
+  "scenario:enforces":{
+      "@type":"@id"
+  }
+}

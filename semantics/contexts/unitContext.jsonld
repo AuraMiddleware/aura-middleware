@@ -1,0 +1,7 @@
+{
+  "sense":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotSense#",
+  "Unit":"sense:Unit",
+  "sense:unitOf":{
+      "@type":"@id"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "dev":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotDevice#",
+  "Device":"dev:Device",
+  "dev:hasPlatform":{
+      "@type":"@id"
+  },
+  "brand":"dev:Brand"
+}

@@ -1,0 +1,10 @@
+{
+  "actuator":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotActuate#",
+  "ContinuousActuator":"actuator:ContinuousActuator",
+  "actuator:increases":{
+      "@type":"@id"
+  },
+  "actuator:decreases":{
+      "@type":"@id"
+  }
+}

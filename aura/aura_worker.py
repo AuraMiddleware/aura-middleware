@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from aura.managers import DeviceManager as dev
 from aura.managers import TaskManager as task
 from zeroless import (Server, Client)

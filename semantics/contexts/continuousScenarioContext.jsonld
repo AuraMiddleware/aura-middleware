@@ -1,0 +1,9 @@
+{
+  "scenario":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotScenario#",
+  "ContinuousScenario":"scenario:ContinuousScenario",
+  "maxValue":"scenario:Range:MaxValue",
+  "minValue":"scenario:Range:MinValue",
+  "scenario:enforces":{
+      "@type":"@id"
+  }
+}

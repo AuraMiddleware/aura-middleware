@@ -1,0 +1,9 @@
+{
+  "dev":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotDevice#",
+  "Measurement":"dev:Measurement",
+  "value":"dev:Value",
+  "timestamp":"dev:Timestamp",
+  "dev:wasMeasuredBy":{
+      "@type":"@id"
+  }
+}

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import paho.mqtt.client as mqtt
 from time import sleep
 from zeroless import (Server, Client)

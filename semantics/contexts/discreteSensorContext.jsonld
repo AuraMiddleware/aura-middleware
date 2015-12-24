@@ -1,0 +1,10 @@
+{
+  "sense":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotSense#",
+  "DiscreteSensor":"sense:Sensor:DiscreteSensor",
+  "Range":"sense:Range",
+  "maxValue":"Range:MaxValue",
+  "minValue":"Range:MinValue",
+  "sense:canMeasure":{
+      "@type":"@id"
+  }
+}
