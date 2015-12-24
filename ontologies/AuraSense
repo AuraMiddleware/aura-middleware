@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY sarmiotsense "http://localhost/SarmiotSense#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#"
+     xml:base="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sarmiotsense="http://localhost/SarmiotSense#">
+    <owl:Ontology rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense">
+        <owl:versionInfo rdf:datatype="&xsd;decimal">0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#canMeasure -->
+
+    <owl:ObjectProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#canMeasure">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label>canMeasure</rdfs:label>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#ContinuousSensor"/>
+        <rdfs:range rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#unitOf -->
+
+    <owl:ObjectProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#unitOf">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label>unitOf</rdfs:label>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Unit"/>
+        <rdfs:range rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#ID -->
+
+    <owl:DatatypeProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#ID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#ContinuousSensor"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#DiscreteSensor"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Unit"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Variable"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#MaxValue -->
+
+    <owl:DatatypeProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#MaxValue">
+        <rdfs:subPropertyOf rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Range"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#MinValue -->
+
+    <owl:DatatypeProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#MinValue">
+        <rdfs:subPropertyOf rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Range"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Precision -->
+
+    <owl:DatatypeProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Precision">
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Range -->
+
+    <owl:DatatypeProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Range"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#ContinuousSensor -->
+
+    <owl:Class rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#ContinuousSensor">
+        <rdfs:label>ContinuousSensor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#DiscreteSensor -->
+
+    <owl:Class rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#DiscreteSensor">
+        <rdfs:label>DiscreteSensor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Sensor -->
+
+    <owl:Class rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Sensor"/>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Unit -->
+
+    <owl:Class rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Unit">
+        <rdfs:label>Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Variable -->
+
+    <owl:Class rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraSense#Variable">
+        <rdfs:label>Variable</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

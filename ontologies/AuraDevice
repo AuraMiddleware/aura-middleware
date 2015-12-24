@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY sarmiotdevice "http://localhost/SarmiotDevice#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#"
+     xml:base="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice"
+     xmlns:sarmiotdevice="http://localhost/SarmiotDevice#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice">
+        <owl:versionInfo rdf:datatype="&xsd;string">0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#hasActuator -->
+
+    <owl:ObjectProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#hasActuator">
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Platform"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#hasPlatform -->
+
+    <owl:ObjectProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#hasPlatform">
+        <rdfs:label>hasPlatform</rdfs:label>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Device"/>
+        <rdfs:range rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Platform"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#hasSensor -->
+
+    <owl:ObjectProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#hasSensor">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label>hasSensor</rdfs:label>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Platform"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#wasMeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#wasMeasuredBy">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label>wasMeasuredBy</rdfs:label>
+        <rdfs:range rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Device"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Measurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Address -->
+
+    <owl:DatatypeProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Address">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Device"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Brand -->
+
+    <owl:DatatypeProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Brand">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Device"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Platform"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#ID -->
+
+    <owl:DatatypeProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#ID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Device"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Timestamp -->
+
+    <owl:DatatypeProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Timestamp">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Measurement"/>
+        <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Value -->
+
+    <owl:DatatypeProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Value">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Measurement"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Device -->
+
+    <owl:Class rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Device">
+        <rdfs:label>Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Measurement -->
+
+    <owl:Class rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Measurement">
+        <rdfs:label>Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Platform -->
+
+    <owl:Class rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraDevice#Platform">
+        <rdfs:label>Platform</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

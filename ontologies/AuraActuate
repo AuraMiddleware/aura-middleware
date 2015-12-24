@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY sarmiotactuate "http://localhost/SarmiotActuate#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#"
+     xml:base="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sarmiotactuate="http://localhost/SarmiotActuate#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate">
+        <owl:versionInfo rdf:datatype="&xsd;decimal">0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#changeState -->
+
+    <owl:ObjectProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#changeState">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#DiscreteActuator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#decreases -->
+
+    <owl:ObjectProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#decreases">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#ContinuousActuator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#increases -->
+
+    <owl:ObjectProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#increases">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#ContinuousActuator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#ID -->
+
+    <owl:DatatypeProperty rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#ID"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#Actuator -->
+
+    <owl:Class rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#Actuator">
+        <rdfs:label>Actuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#ContinuousActuator -->
+
+    <owl:Class rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#ContinuousActuator">
+        <rdfs:label>ContinuousActuator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#Actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#DiscreteActuator -->
+
+    <owl:Class rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#DiscreteActuator">
+        <rdfs:label>DiscreteActuator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#Actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#PowerOffActuator -->
+
+    <owl:NamedIndividual rdf:about="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#PowerOffActuator">
+        <rdf:type rdf:resource="file:///home/vinicius/UFPE/TG/AuraMiddleware/ontologies/AuraActuate#ContinuousActuator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/llg/ontologies/2015/5/SarmiotDevice#Value">
+        <rdfs:comment>DiscreteActuator</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
