@@ -1,5 +1,5 @@
 {
-  "dev":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotDevice#",
+  "dev":"localhost/SarmiotDevice#",
   "Device":"dev:Device",
   "dev:hasPlatform":{
       "@type":"@id"

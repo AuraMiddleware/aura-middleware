@@ -1,5 +1,5 @@
 {
-  "actuator":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotActuate#",
+  "actuator":"localhost/SarmiotActuate#",
   "DiscreteActuator":"actuator:DiscreteActuator",
   "actuator:changeState":{
       "@type":"@id"

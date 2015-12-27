@@ -1,5 +1,5 @@
 {
-  "sense": "file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotSense#",
+  "sense": "localhost/SarmiotSense#",
   "ContinuousSensor":"sense:Sensor:ContinuousSensor",
   "sense:canMeasure":{
       "@type":"@id"

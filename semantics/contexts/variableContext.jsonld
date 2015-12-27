@@ -1,4 +1,4 @@
 {
-  "sense":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotSense#",
+  "sense":"localhost/SarmiotSense#",
   "Variable":"sense:Variable"
 }

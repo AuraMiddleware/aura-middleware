@@ -1,5 +1,5 @@
 {
-  "sense":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotSense#",
+  "sense":"localhost/SarmiotSense#",
   "DiscreteSensor":"sense:Sensor:DiscreteSensor",
   "Range":"sense:Range",
   "maxValue":"Range:MaxValue",

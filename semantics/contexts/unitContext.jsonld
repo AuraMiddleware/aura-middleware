@@ -1,5 +1,5 @@
 {
-  "sense":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotSense#",
+  "sense":"localhost/SarmiotSense#",
   "Unit":"sense:Unit",
   "sense:unitOf":{
       "@type":"@id"

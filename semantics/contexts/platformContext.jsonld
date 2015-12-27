@@ -1,5 +1,5 @@
 {
-  "dev":"file:///home/vinicius/UFPE/BDI/projetoSarmiot/ontologies/SarmiotDevice#",
+  "dev":"localhost/SarmiotDevice#",
   "Platform":"dev:Platform",
   "brand":"dev:Brand",
   "dev:hasSensor":{
