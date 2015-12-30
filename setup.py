@@ -9,6 +9,7 @@ setup(name='AuraMiddleware',
       install_requires=[
           'zeroless',
           'paho-mqtt',
+          'pymongo'
       ],
       entry_points = {
         'console_scripts': ['aura=aura.aura_worker:main'],

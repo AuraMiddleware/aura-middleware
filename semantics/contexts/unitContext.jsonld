@@ -1,7 +1,0 @@
-{
-  "sense":"localhost/SarmiotSense#",
-  "Unit":"sense:Unit",
-  "sense:unitOf":{
-      "@type":"@id"
-  }
-}
