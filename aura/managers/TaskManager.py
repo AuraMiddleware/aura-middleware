@@ -26,3 +26,4 @@ class TaskManager:
     def show_tasks(self):
         #TaskManager -> SPARQL
         print("show_tasks")
+        

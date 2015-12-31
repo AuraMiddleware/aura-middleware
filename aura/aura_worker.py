@@ -16,7 +16,7 @@ def main():
             device_manager.process(obj)
         else:
             print("this type of msg is for TaskManager to process!")
-            #task.TaskManager().work()
+            #task_manager.process(obj)
 
 if __name__ == "__main__":
     main()
