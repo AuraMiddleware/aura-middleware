@@ -7,11 +7,6 @@ from zeroless import Client
 zmq_client = Client()
 zmq_client.connect_local(port=12345)
 
-class AuraBroker():
-    def work(self):
-        print("AuraBroker called")
-
-
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
     client.subscribe("gateways/test")
