@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 
-from aura.managers import DeviceManager as dev
-from aura.managers import TaskManager as task
-from zeroless import (Server, Client)
 import json
 
+from zeroless import (Server)
+
+from aura.managers import DeviceManager as dev
+from aura.managers import TaskManager as task
+from aura.managers import helpers
+
 def main():
-    device_manager = dev.DeviceManager(12346)
-    task_manager = task.TaskManager(12347)
+    device_manager = dev.DeviceManager(helpers.zmq_ports['devices'])
+    task_manager = task.TaskManager(helpers.zmq_ports['tasks'])
 
     listen_for_push = Server(port=12345).pull()
     for msg in listen_for_push:

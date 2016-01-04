@@ -12,6 +12,7 @@ setup(name='AuraMiddleware',
           'pymongo'
       ],
       entry_points = {
-        'console_scripts': ['aura=aura.aura_worker:main'],
+        'console_scripts': ['auraWorker=aura.aura_worker:main',
+                            'auraBroker=aura.aura_broker:main'],
       }
       )
