@@ -10,10 +10,8 @@ db = client['aura']
 #TODO: Maybe Enum these collection names
 devices = db['devices']
 platforms = db['platforms']
-continuous_sensors = db['continuous_sensors']
-discrete_sensors = db['discrete_sensors']
-continuous_actuators = db['continuous_actuators']
-discrete_actuators = db['discrete_actuators']
+sensors = db['sensors']
+actuators = db['actuators']
 units = db['units']
 variables = db['variables']
 measurements = db['measurements']
@@ -26,8 +24,8 @@ def get(collection, document_id):
     return result
 
 def store(collection, document):
+
     db[collection].insert(document)
-    get(collection, document["@id"])
     
 def remove_id(collection, document_id):
     db[collection].remove({"@id":document_id})

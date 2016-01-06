@@ -18,6 +18,7 @@ def main():
 
     listen_for_push = Server(port=12345).pull()
     for msg in listen_for_push:
+        print(msg.decode())
         obj = json.loads(msg.decode())
         if obj['@type'] in device_related:
             device_manager.process(obj)

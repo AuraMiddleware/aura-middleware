@@ -13,7 +13,10 @@ class DeviceManager:
         self.push = self.zmq_client.push()
     
     def create(self, collection, obj):
-        db.store(collection, obj)
+        if not self.verify(collection, obj['@id']):
+            db.store(collection, obj)
+        else:
+            print("Already have " + str(obj['@id']) + " in database.")
 
     def notify_unknown_object(self, obj_type, obj_id):
         obj = {}
@@ -87,7 +90,7 @@ class DeviceManager:
             if self.verify('variables', obj['sense:unitOf']):
                 self.create('units', obj)
             else:
-                self.notify_unknown_object('Variable')
+                self.notify_unknown_object('Variable', obj['sense:unitOf'])
         #Variable
         elif obj['@type'] == 'Variable':
             self.create('variables', obj)
