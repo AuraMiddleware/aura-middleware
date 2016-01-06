@@ -11,11 +11,15 @@ from aura.managers import helpers
 def main():
     device_manager = dev.DeviceManager(helpers.zmq_ports['devices'])
     task_manager = task.TaskManager(helpers.zmq_ports['tasks'])
+    device_related = ['Measurement', 'Device', 'Platform',
+                      'ContinuousActuator', 'DiscreteActuator',
+                      'ContinuousSensor','DiscreteSensor',
+                      'Unit', 'Variable']
 
     listen_for_push = Server(port=12345).pull()
     for msg in listen_for_push:
         obj = json.loads(msg.decode())
-        if obj['@type'] in ['Device','Measurement','Platform']:
+        if obj['@type'] in device_related:
             device_manager.process(obj)
         else:
             print("this type of msg is for TaskManager to process!")
