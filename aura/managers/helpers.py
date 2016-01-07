@@ -1,3 +1,4 @@
-zmq_ports = {}
-zmq_ports['devices'] = 12346
-zmq_ports['tasks'] = 12347
+ports = {}
+ports['broker'] = 12349
+ports['device_manager'] = 12346
+ports['task_manager'] = 12347

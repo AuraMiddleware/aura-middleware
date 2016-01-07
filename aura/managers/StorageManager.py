@@ -2,9 +2,6 @@ from pymongo import MongoClient
 
 client = MongoClient('localhost', 27017)
 
-#TODO delete it later
-client.drop_database('aura')
-
 db = client['aura']
 
 #TODO: Maybe Enum these collection names
@@ -20,7 +17,6 @@ commands = db['commands']
 
 def get(collection, document_id):
     result = db[collection].find_one({"@id":document_id})
-    print("get("+collection+","+document_id+"):\n" + str(result) + "\n")
     return result
 
 def store(collection, document):

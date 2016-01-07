@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 import paho.mqtt.client as mqtt
-from time import sleep
+from aura.managers import helpers
 from zeroless import Client, Server
 
 zmq_client = Client()
-zmq_client.connect_local(port=12345)
+zmq_client.connect_local(port=helpers.ports['device_manager'])
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
@@ -26,7 +26,7 @@ client.publish("gateways/broker", "hi")
 client.loop_start()
 
 #Listen for DeviceManager ZMQ messages
-listen_for_push = Server(port=12349).pull()
+listen_for_push = Server(port=helpers.ports['broker']).pull()
 for msg in listen_for_push:
     client.publish("gateways/broker",msg.decode())
 
