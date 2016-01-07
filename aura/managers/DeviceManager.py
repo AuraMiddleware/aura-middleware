@@ -26,7 +26,7 @@ def notify_unknown_object(obj_type, obj_id):
     obj['type'] = obj_type
     push_to_broker(json.dumps(obj).encode())
 
-def send_command(gateway, command):
+def send_command(device, command):
     #DeviceManager -> Gateway
     print("send_command")
 
