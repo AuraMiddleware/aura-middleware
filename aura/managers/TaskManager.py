@@ -1,7 +1,7 @@
 from zeroless import (Client, Server)
 import json
 
-from aura.managers import SemanticManager as brain
+from aura.managers import SemanticGraph as graph
 from aura.managers import StorageManager as db
 from aura.managers import helpers
 

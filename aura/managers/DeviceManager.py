@@ -39,17 +39,19 @@ for msg in listen_for_push:
             create('measurements', obj)
             push_to_task(msg)
         else:
-            notify_unknown_object('Device')
+            notify_unknown_object('Device', obj['dev:wasMeasuredBy'])
     #Device
     elif obj['@type'] == 'Device':
         if verify('platforms', obj['dev:hasPlatform']):
             create('devices', obj)
         else:
-            notify_unknown_object('Platform',obj['dev:hasPlatform'])
+            notify_unknown_object('Platform', obj['dev:hasPlatform'])
     #Platform
     elif obj['@type'] == 'Platform':
-        if verify('sensors', obj['dev:hasSensor']):
-            if verify('actuators',obj['dev:hasActuator']):
+        if verify('continuous_sensors', obj['dev:hasSensor']) or\
+                verify('discrete_sensors', obj['dev:hasSensor']):
+            if verify('continuous_actuators', obj['dev:hasActuator']) or\
+                    verify('discrete_actuators', obj['dev:hasActuator']):
                 create('platforms', obj)
             else:
                 notify_unknown_object('Actuator', obj['dev:hasActuator'])
@@ -58,25 +60,25 @@ for msg in listen_for_push:
     #ContinuousSensor
     elif obj['@type'] == 'ContinuousSensor':
         if verify('units', obj['sense:canMeasure']):
-            create('sensors', obj)
+            create('continuous_sensors', obj)
         else:
             notify_unknown_object('Unit', obj['sense:canMeasure'])
     #DiscreteSensor
     elif obj['@type'] == 'DiscreteSensor':
         if verify('variables', obj['sense:canMeasure']):
-            create('sensors', obj)
+            create('discrete_sensors', obj)
         else:
             notify_unknown_object('Variable', obj['sense:canMeasure'])
     #ContinuousActuator
     elif obj['@type'] == 'ContinuousActuator':
         if verify('variables', obj['actuator:increases']):
-            create('actuators', obj)
+            create('continuous_actuators', obj)
         else:
             notify_unknown_object('Variable', obj['actuator:increases'])
     #DiscreteActuator
     elif obj['@type'] == 'DiscreteActuator':
         if verify('variables', obj['actuator:changeState']):
-            create('actuators', obj)
+            create('discrete_actuators', obj)
         else:
             notify_unknown_object('Variable', obj['actuator:changeState'])
     #Unit
