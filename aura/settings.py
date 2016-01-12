@@ -31,6 +31,7 @@ DOMAIN = {
             "@type":{},
             "@id":{},
             "dev:wasMeasuredBy":{},
+            "dev:valueOf":{},
             "value":{},
             "timestamp":{}
         }

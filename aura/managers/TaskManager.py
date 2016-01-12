@@ -9,9 +9,10 @@ zmq_device = Client()
 zmq_device.connect_local(port=helpers.ports['device_manager'])
 push_to_device = zmq_device.push()
     
-def create_condition():
+def create_condition(condition):
     print("create_condition")
     #TaskManager -> StorageManager
+    db.store('conditions', condition)
 
 def update_condition():
     #TaskManager -> StorageManager
