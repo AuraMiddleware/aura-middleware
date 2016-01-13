@@ -9,8 +9,8 @@ collections = ['graph','measurements','devices','platforms',
                'discrete_sensors', 'continuous_actuators', 'conditions',
                'discrete_actuators', 'units', 'variables', 'commands']
 
-def get(collection, document_id):
-    result = db[collection].find_one({"@id":document_id})
+def get(collection, document_id, key="@id"):
+    result = db[collection].find_one({key:document_id})
     return result
 
 def store(collection, document):
