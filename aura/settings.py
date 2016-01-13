@@ -13,6 +13,11 @@ additional_lookup = {
 id = {'type':'string'}
 
 DOMAIN = {
+    'graph':{
+        'schema':{
+            "graph":{}
+        }
+    },
     'devices': {
         'additional_lookup': additional_lookup,
         'schema':{

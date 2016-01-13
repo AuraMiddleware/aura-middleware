@@ -1,4 +1,5 @@
 from aura.managers import StorageManager as db
+from aura.managers import SemanticManager as graph
 from zeroless import (Client, Server)
 from aura.managers import helpers
 import json
@@ -16,6 +17,7 @@ def verify(collection, obj_id):
 
 def create(collection, obj):
     if not verify(collection, obj['@id']):
+        graph.parse(json.dumps(obj))
         db.store(collection, obj)
     else:
         print("Already have " + str(obj['@id']) + " in database.")
@@ -37,6 +39,7 @@ for msg in listen_for_push:
     if obj['@type'] == 'Measurement':
         if verify('devices', obj['dev:wasMeasuredBy']):
             create('measurements', obj)
+
             push_to_task(msg)
         else:
             notify_unknown_object('Device', obj['dev:wasMeasuredBy'])
