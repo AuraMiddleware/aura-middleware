@@ -20,5 +20,5 @@ def remove_id(collection, document_id):
     db[collection].remove({"@id":document_id})
     
 def update(collection, document_id, new_document):
-    db[collection].find_one_and_replace({"id":document_id},new_document,
+    db[collection].find_one_and_replace({"id":document_id}, new_document,
                                         upsert=True)

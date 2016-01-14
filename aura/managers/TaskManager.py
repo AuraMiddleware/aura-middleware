@@ -60,13 +60,32 @@ def get_available_conditions():
         ?sensor auraSense:canMeasure ?variable .
     }"""
     result = graph.query(conditions_query)
-    for row in result:
-        print(row)
+    return result
+
 
 def test_conditions(measurement):
+    variable = measurement["dev:valueOf"]
+    value = str(measurement["value"])
     conditions = """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX auraTask: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraTask#>
+    PREFIX auraDev: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
+
+    SELECT ?condition
+    WHERE {
+        ?condition auraTask:enforces ?variable .
+    	?condition auraTask:Range:MinValue ?minValue .
+  		?condition auraTask:Range:MaxValue ?maxValue .
+
+  		FILTER(?value < ?minValue || ?value > ?maxValue)
+    }
     """
-    result = graph.query(conditions)
+    query = graph.makeQuery(conditions)
+    result = graph.query(query, bindings={'variable':variable,'value':value})
+    count = 0
+    for row in result:
+        count += 1
+    print(count)
 
 
 listen_for_push = Server(port=helpers.ports['task_manager']).pull()

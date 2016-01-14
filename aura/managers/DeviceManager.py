@@ -39,7 +39,6 @@ for msg in listen_for_push:
     if obj['@type'] == 'Measurement':
         if verify('devices', obj['dev:wasMeasuredBy']):
             create('measurements', obj)
-
             push_to_task(msg)
         else:
             notify_unknown_object('Device', obj['dev:wasMeasuredBy'])
