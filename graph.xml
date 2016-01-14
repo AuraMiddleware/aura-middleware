@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dev="https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#"
+  xmlns:actuator="https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraActuate#"
+  xmlns:ns1="https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraSense#Range:"
+  xmlns:ns2="https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraSense#Sensor:"
+  xmlns:sense="https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraSense#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/2948711508532">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy>
+      <dev:Device rdf:about="http://localhost:5000/devices/device1">
+        <dev:hasPlatform rdf:resource="http://localhost:5000/platforms/discretePlatform1"/>
+      </dev:Device>
+    </dev:wasMeasuredBy>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.9844535622324</dev:Value>
+    <dev:Timestamp>2016-01-13 10:55:20.871082</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/6637197503360">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 11:00:38.197429</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy>
+      <dev:Device rdf:about="http://localhost:5000/devices/device0">
+        <dev:hasPlatform rdf:resource="http://localhost:5000/platforms/continuousPlatform1"/>
+      </dev:Device>
+    </dev:wasMeasuredBy>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/35653389076793">
+    <dev:Timestamp>2016-01-13 10:51:14.338842</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">31.18677183038583</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/54114550878661">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Timestamp>2016-01-13 10:49:49.455019</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">36.89400745396282</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/9771209934817">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Timestamp>2016-01-13 11:00:47.209866</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">31.606400563404936</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/9980443737846">
+    <dev:Timestamp>2016-01-13 10:49:41.443667</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">90.30394900262544</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/50718820706434">
+    <dev:Timestamp>2016-01-13 10:55:28.882009</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">55.31865601386834</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/8540204468775">
+    <dev:Timestamp>2016-01-13 11:00:43.204409</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.862785319833686</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/86804248797771">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">46.87763496376236</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 10:49:27.424807</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/31344333663934">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Timestamp>2016-01-13 10:49:33.433306</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">97.83017885696343</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/33052607318172">
+    <dev:Timestamp>2016-01-13 10:51:50.260669</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.19000119999714</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/65742780804495">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 10:52:02.278012</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.7921241530634244</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/3643269301191">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.22092075502096</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Timestamp>2016-01-13 10:51:56.269230</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/7144235105363">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:49:26.423449</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/63142156664721">
+    <dev:Timestamp>2016-01-13 11:00:51.215611</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">56.63218421541208</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/88077325758329">
+    <dev:Timestamp>2016-01-13 11:58:07.732510</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/77844580023786">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Timestamp>2016-01-13 10:49:51.457930</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">46.55406368350913</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/87114423471187">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Timestamp>2016-01-13 10:49:40.442275</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/87628754925506">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:55:23.875420</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/48754376635733">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:Timestamp>2016-01-13 10:49:36.437590</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/32848792096408">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">72.39158305808269</dev:Value>
+    <dev:Timestamp>2016-01-13 10:55:26.879138</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/15643265922019">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:05.326520</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/1348943986939">
+    <dev:Timestamp>2016-01-13 11:58:53.943917</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.261412789167938</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/96852143939020">
+    <dev:Timestamp>2016-01-13 11:00:50.214341</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/20748768883442">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">85.9667682289529</dev:Value>
+    <dev:Timestamp>2016-01-13 10:55:24.876821</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/62762600323495">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:49.259969</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/52202070268056">
+    <dev:Timestamp>2016-01-13 11:00:45.206954</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">66.9015020476762</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/97864362456612">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 10:49:35.436172</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.5355854675712655</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/73423416371251">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.9901476551185056</dev:Value>
+    <dev:Timestamp>2016-01-13 10:51:16.341561</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/41378703821329">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Timestamp>2016-01-13 10:55:19.870322</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/84749404247626">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 11:58:50.940355</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/60724479551638">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:49:44.447884</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/97102815119359">
+    <dev:Timestamp>2016-01-13 10:52:05.281444</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/48239389744655">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">94.86311672861927</dev:Value>
+    <dev:Timestamp>2016-01-13 11:58:49.938903</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/70889468379649">
+    <dev:Timestamp>2016-01-13 11:58:55.946769</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">89.71715621118973</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/29514381564553">
+    <dev:Timestamp>2016-01-13 10:49:37.438089</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.759442767321495</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/45293402767878">
+    <dev:Timestamp>2016-01-13 10:51:15.340206</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/8007263616978">
+    <dev:Timestamp>2016-01-13 10:51:52.263553</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">89.02552382756264</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/27587408495395">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Timestamp>2016-01-13 11:58:13.740776</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/69259375615079">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 11:58:48.937489</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/75073294304538">
+    <dev:Timestamp>2016-01-13 10:51:07.329364</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/12994537026070">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:49:48.453626</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/11252057691059">
+    <dev:Timestamp>2016-01-13 11:00:44.205731</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/97017440752938">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Timestamp>2016-01-13 11:58:16.744003</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">74.11159494140708</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/3723936047475">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">88.8578050643914</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 11:58:47.935973</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/48679411097555">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19.36681274400196</dev:Value>
+    <dev:Timestamp>2016-01-13 11:58:51.941036</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/77684263324048">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Timestamp>2016-01-13 10:49:28.426269</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/23782114166230">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:Timestamp>2016-01-13 11:00:48.211349</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/45422679381303">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:Timestamp>2016-01-13 10:51:55.267875</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/25467413258278">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.702382336050654</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 11:58:14.741253</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/47014493372659">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.453326019987564</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Timestamp>2016-01-13 10:49:45.449269</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/18488783914783">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Timestamp>2016-01-13 10:55:25.878326</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/52442665684592">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:54.266496</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">96.06458876844671</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/767243475178">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:Timestamp>2016-01-13 10:49:34.434680</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/46013375126858">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:13.337445</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/41294508244689">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:Timestamp>2016-01-13 10:49:46.450755</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/63374522933217">
+    <dev:Timestamp>2016-01-13 10:49:47.452228</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.814599431034399</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/24684452027163">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Timestamp>2016-01-13 10:49:42.445112</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/11568740358329">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 10:55:22.873971</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">78.43970045913407</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/55864319223492">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:49:32.431855</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/42602586768618">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:48.258616</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">68.28354357983225</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/3749426073367">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 11:58:52.942536</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/13762621067720">
+    <dev:Timestamp>2016-01-13 10:51:51.262033</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/96924305529169">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 10:49:31.430484</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">21.28909646060092</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/74162829009990">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.137907200936232</dev:Value>
+    <dev:Timestamp>2016-01-13 10:52:06.282834</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/59834291865019">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:49:30.429104</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/3582801207991">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">24.01634895683008</dev:Value>
+    <dev:Timestamp>2016-01-13 10:52:04.280052</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/4688806086167">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:55:27.880539</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/18281988814484">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">31.029804684564233</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Timestamp>2016-01-13 11:00:39.198815</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/61397310767098">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Timestamp>2016-01-13 11:58:06.731006</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">97.6179559129305</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/9749345034291">
+    <dev:Timestamp>2016-01-13 11:58:46.934431</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/21602721708142">
+    <dev:Timestamp>2016-01-13 10:51:58.272100</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">28.022653197836934</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/56382002501418">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:Timestamp>2016-01-13 11:00:40.200180</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/61072016499478">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Timestamp>2016-01-13 11:00:41.201577</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.21544255932845</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/2197352183213">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:Timestamp>2016-01-13 11:58:09.735147</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/98059331151821">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Timestamp>2016-01-13 11:58:45.933051</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">37.6170436162248</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/66324409522646">
+    <dev:Timestamp>2016-01-13 10:49:39.440881</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">49.78800626750809</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/51897297548660">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Timestamp>2016-01-13 11:58:05.729698</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/42409317137619">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:Timestamp>2016-01-13 11:58:44.931643</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/50727426972637">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 11:58:15.742628</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/2943336573764">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:10.333586</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19.695916657671365</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/5644276909764">
+    <dev:Timestamp>2016-01-13 10:49:29.427628</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">23.278115782520516</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/1130439570929">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:Timestamp>2016-01-13 10:49:38.439493</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/76564465726308">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 10:49:43.446508</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">23.479192863725817</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/6478725322003">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Timestamp>2016-01-13 10:55:21.872466</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/62349454706010">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Timestamp>2016-01-13 11:58:54.945401</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/5882766074700">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:Timestamp>2016-01-13 10:52:01.276541</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/15327393807667">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">31.319448869923228</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Timestamp>2016-01-13 11:58:12.739308</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/17364594701425">
+    <dev:Timestamp>2016-01-13 10:49:52.459409</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/23522085072296">
+    <dev:Timestamp>2016-01-13 11:00:46.208430</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/18572706851188">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:Timestamp>2016-01-13 10:51:57.270614</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/20272030874315">
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 11:00:42.203013</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/7696265046599">
+    <dev:Timestamp>2016-01-13 10:51:53.264976</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/67043429392805">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:17.342877</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/87032794792033">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:Timestamp>2016-01-13 10:52:03.279405</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/82393308154786">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">79.84269254022624</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:08.330738</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/77512751202493">
+    <dev:Timestamp>2016-01-13 10:52:00.275053</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">32.834277851343266</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/23007367204636">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 11:58:10.736647</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">48.889163170687134</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/38193279675268">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Timestamp>2016-01-13 10:51:06.327906</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">13.132764082670745</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/97523347379447">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:11.334672</dev:Timestamp>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/79024565994168">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:49:50.456526</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/6251257299440">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:47.257238</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/61783443045022">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">20.67702229694618</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:18.344241</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/18102129293147">
+    <dev:Timestamp>2016-01-13 11:00:49.212856</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">35.02008196958103</dev:Value>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/95963361083803">
+    <dev:Timestamp>2016-01-13 10:51:12.336043</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.440897531237322</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/79307338192924">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/continuousVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">99.58138633162544</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Timestamp>2016-01-13 11:58:08.733749</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/10952169644514">
+    <dev:Timestamp>2016-01-13 11:00:52.216900</dev:Timestamp>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/11112737576108">
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:59.273688</dev:Timestamp>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/33227380755399">
+    <dev:Timestamp>2016-01-13 11:58:11.738007</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device1"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+  </dev:Measurement>
+  <dev:Measurement rdf:about="http://localhost:5000/measurements/64623321833946">
+    <dev:valueOf rdf:resource="http://localhost:5000/devices/discreteVariable"/>
+    <dev:Timestamp>2016-01-13 10:51:09.332115</dev:Timestamp>
+    <dev:wasMeasuredBy rdf:resource="http://localhost:5000/devices/device0"/>
+    <dev:Value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dev:Value>
+  </dev:Measurement>
+  <ns2:DiscreteSensor rdf:about="http://localhost:5000/discrete_sensors/discreteSensor1">
+    <sense:canMeasure>
+      <sense:Variable rdf:about="http://localhost:5000/variables/discreteVariable"/>
+    </sense:canMeasure>
+  </ns2:DiscreteSensor>
+  <actuator:ContinuousActuator rdf:about="http://localhost:5000/continuous_actuators/continuousActuator1">
+    <actuator:decreases>
+      <sense:Variable rdf:about="http://localhost:5000/variables/continuousVariable"/>
+    </actuator:decreases>
+    <actuator:increases rdf:resource="http://localhost:5000/variables/continuousVariable"/>
+  </actuator:ContinuousActuator>
+  <ns2:ContinuousSensor rdf:about="http://localhost:5000/continuous_sensors/continuousSensor1">
+    <ns1:MinValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</ns1:MinValue>
+    <sense:Precision rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5564572340012529</sense:Precision>
+    <sense:Precision rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.2369693883050794</sense:Precision>
+    <sense:Precision rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5473593535171147</sense:Precision>
+    <sense:Precision rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.7730582450265827</sense:Precision>
+    <ns1:MaxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</ns1:MaxValue>
+    <sense:Precision rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5956536321834294</sense:Precision>
+    <sense:canMeasure>
+      <sense:Unit rdf:about="http://localhost:5000/units/unit#1">
+        <sense:unitOf rdf:resource="http://localhost:5000/variables/continuousVariable"/>
+      </sense:Unit>
+    </sense:canMeasure>
+    <sense:Precision rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.14601718232204441</sense:Precision>
+    <sense:Precision rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.85425754164623</sense:Precision>
+  </ns2:ContinuousSensor>
+  <dev:Platform rdf:about="http://localhost:5000/platforms/continuousPlatform1">
+    <dev:Brand>Plataforma continuousPlatform1</dev:Brand>
+    <dev:hasActuator rdf:resource="http://localhost:5000/continuous_actuators/continuousActuator1"/>
+    <dev:hasSensor rdf:resource="http://localhost:5000/continuous_sensors/continuousSensor1"/>
+  </dev:Platform>
+  <dev:Platform rdf:about="http://localhost:5000/platforms/discretePlatform1">
+    <dev:Brand>Plataforma discretePlatform1</dev:Brand>
+    <dev:hasSensor rdf:resource="http://localhost:5000/discrete_sensors/discreteSensor1"/>
+    <dev:hasActuator>
+      <actuator:DiscreteActuator rdf:about="http://localhost:5000/discrete_actuators/discreteActuator1">
+        <actuator:changeState rdf:resource="http://localhost:5000/variables/discreteVariable"/>
+      </actuator:DiscreteActuator>
+    </dev:hasActuator>
+  </dev:Platform>
+</rdf:RDF>
