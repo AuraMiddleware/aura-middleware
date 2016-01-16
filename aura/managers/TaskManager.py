@@ -8,6 +8,23 @@ zmq_device = Client()
 zmq_device.connect_local(port=helpers.ports['device_manager'])
 push_to_device = zmq_device.push()
 
+conditions_str = """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX auraTask: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraTask#>
+    PREFIX auraDev: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
+
+    SELECT ?condition ?variable
+    WHERE {
+        ?condition auraTask:enforces ?variable
+    }
+    """
+'''
+?condition auraTask:enforces ?variable .
+    	?condition auraTask:Range:MinValue ?minValue .
+  		?condition auraTask:Range:MaxValue ?maxValue .
+
+  		FILTER(?value < ?minValue || ?value > ?maxValue)'''
+conditions = graph.make_query(conditions_str)
 
 def create_condition(condition):
     print("create_condition")
@@ -62,30 +79,21 @@ def get_available_conditions():
     result = graph.query(conditions_query)
     return result
 
+def trigger_commands(condition):
+    print("trigger commands!")
+    print(condition)
 
 def test_conditions(measurement):
     variable = measurement["dev:valueOf"]
     value = str(measurement["value"])
-    conditions = """
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX auraTask: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraTask#>
-    PREFIX auraDev: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
-
-    SELECT ?condition
-    WHERE {
-        ?condition auraTask:enforces ?variable .
-    	?condition auraTask:Range:MinValue ?minValue .
-  		?condition auraTask:Range:MaxValue ?maxValue .
-
-  		FILTER(?value < ?minValue || ?value > ?maxValue)
-    }
-    """
-    query = graph.makeQuery(conditions)
-    result = graph.query(query, bindings={'variable':variable,'value':value})
-    count = 0
+    result = graph.query(conditions_str, bindings={'variable':variable,
+                                                   'value':value})
+    print("testing conditions")
+    print(graph.get_graph().serialize(format='pretty-xml'))
+    print(result)
     for row in result:
-        count += 1
-    print(count)
+        #trigger_commands(row)
+        print("measurement disrespected a condition!")
 
 
 listen_for_push = Server(port=helpers.ports['task_manager']).pull()
@@ -93,5 +101,6 @@ for msg in listen_for_push:
     obj = json.loads(msg.decode())
     if obj['@type'] == 'Measurement':
         test_conditions(obj)
+        #get_available_conditions()
     else:
         print("i don't know what to do with this message")
