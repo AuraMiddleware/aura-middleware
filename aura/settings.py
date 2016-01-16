@@ -1,6 +1,7 @@
 MONGO_DBNAME = 'aura'
 HATEOAS = False
 
+RESOURCE_METHODS = ['GET', 'POST', 'DELETE']
 ITEM_METHODS = ['GET', 'PUT', 'DELETE']
 ID_FIELD = '_id'
 ITEM_LOOKUP_FIELD = ID_FIELD
@@ -116,4 +117,27 @@ DOMAIN = {
             "@type":{}
         }
     },
+    'commands':{
+        'additional_lookup': additional_lookup,
+        'schema':{
+            "id": id,
+            "@context": {},
+            "@type": {},
+            "@id": {},
+            "value": {},
+            "task:enforces": {}
+        }
+    },
+    'conditions':{
+        'additional_lookup': additional_lookup,
+        'schema':{
+            "id": id,
+            "@context": {},
+            "@type": {},
+            "@id": {},
+            "minValue": {},
+            "maxValue": {},
+            "task:enforces": {}
+        }
+    }
 }

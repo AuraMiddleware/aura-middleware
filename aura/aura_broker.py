@@ -13,6 +13,7 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("gateways/test")
 
 def on_message(client, userdata, msg):
+    #print("sending to DeviceManager")
     push(msg.payload)
 
 client = mqtt.Client()
