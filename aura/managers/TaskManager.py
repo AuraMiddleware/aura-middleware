@@ -29,42 +29,59 @@ def send_command(device, command):
     print("send_command")
 
 
-def get_available_commands():
-    # TaskManager -> SemanticManager
-    commands_query = """
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
-    PREFIX auraActuate: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraActuate#>
-
-    SELECT DISTINCT ?variable ?device ?platform ?actuator
-    WHERE {
-        ?device auraDevice:hasPlatform ?platform .
-  		?platform auraDevice:hasActuator ?actuator .
-        ?actuator auraActuate:increases ?variable .
-    }"""
-    result = graph.query(commands_query)
-    for row in result:
-        print(row)
-
-def get_available_conditions():
-    conditions_query = """
+available_conditions = """
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
     PREFIX auraSense: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraSense#>
 
-    SELECT DISTINCT ?variable ?device ?platform ?sensor
+    SELECT DISTINCT ?device ?unit ?variable
     WHERE {
         ?device auraDevice:hasPlatform ?platform .
   		?platform auraDevice:hasSensor ?sensor .
-        ?sensor auraSense:canMeasure ?variable .
+        ?sensor auraSense:canMeasure ?unit .
+        ?unit auraSense:unitOf ?variable
     }"""
+
+available_commands = """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
+    PREFIX auraSense: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraSense#>
+
+    SELECT DISTINCT ?device ?variable
+    WHERE {
+        ?device auraDevice:hasPlatform ?platform .
+  		?platform auraDevice:hasSensor ?sensor .
+        ?sensor auraSense:canMeasure ?variable.
+    }"""
+
+conditions_query = graph.make_query(available_conditions)
+commands_query = graph.make_query(available_commands)
+
+def get_available_conditions():
     result = graph.query(conditions_query)
-    return result
+    response = {}
+    print("Available conditions:")
+    i = 0
+    for row in result:
+        response[i] = {'device':row[0], 'unit':row[1], 'variable':row[2]}
+        i += 1
+    return response
+
+
+def get_available_commands():
+    result = graph.query(conditions_query)
+    response = {}
+    print("Available commands:")
+    i = 0
+    for row in result:
+        response[i] = {'device':row[0], 'variable':row[1]}
+        i += 1
+    return(response)
+
 
 def trigger_commands(condition):
     print("trigger commands!")
     print(condition)
-
 
 
 def test_conditions(measurement):
@@ -92,8 +109,7 @@ def test_conditions(measurement):
     i = 0
     for row in result:
         i += 1
-        print("row " + str(i))
-        print("measurement disrespected a condition!")
+        print("violated condition #" + str(i))
         print(row[0])#condition?
         print(row[1])#minValue
         print(row[2])#maxValue
@@ -105,6 +121,7 @@ for msg in listen_for_push:
     obj = json.loads(msg.decode())
     if obj['@type'] == 'Measurement':
         test_conditions(obj)
-        #get_available_conditions()
+        get_available_conditions()
+        get_available_commands()
     else:
         print("i don't know what to do with this message")

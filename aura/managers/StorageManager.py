@@ -17,16 +17,19 @@ def get(collection, document_id, key="@id"):
 def find(collection,key,value):
     return db[collection].find({key:value})
 
+
 def verify(collection, obj_id):
     return (get(collection, obj_id) != None)
 
 
 def store(collection, document):
     db[collection].insert(document)
-    
+
+
 def remove_id(collection, document_id):
     db[collection].remove({"@id":document_id})
-    
+
+
 def update(collection, document_id, new_document):
     db[collection].find_one_and_replace({"id":document_id}, new_document,
                                         upsert=True)
