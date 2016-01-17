@@ -137,7 +137,8 @@ DOMAIN = {
             "@id": {},
             "minValue": {},
             "maxValue": {},
-            "task:enforces": {}
+            "task:enforces": {},
+            "task:triggers":{}
         }
     }
 }
