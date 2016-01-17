@@ -55,6 +55,7 @@ DOMAIN = {
         }
     },
     'continuous_sensors':{
+        'url':'sensors/continuous/',
         'additional_lookup': additional_lookup,
         'schema':{
             'id':id,
@@ -68,6 +69,7 @@ DOMAIN = {
         }
     },
     'discrete_sensors':{
+        'url':'sensors/discrete/',
         'additional_lookup': additional_lookup,
         'schema':{
             'id':id,
@@ -78,6 +80,7 @@ DOMAIN = {
         }
     },
     'continuous_actuators':{
+        'url':'actuators/continuous/',
         'additional_lookup': additional_lookup,
         'schema':{
             'id':id,
@@ -89,6 +92,7 @@ DOMAIN = {
         }
     },
     'discrete_actuators':{
+        'url':'actuators/discrete/',
         'additional_lookup': additional_lookup,
         'schema':{
             'id':id,
@@ -140,5 +144,5 @@ DOMAIN = {
             "task:enforces": {},
             "task:triggers":{}
         }
-    }
+    },
 }

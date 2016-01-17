@@ -1,6 +1,6 @@
 from eve import Eve
 from aura.managers import SemanticManager as graph
-from aura.managers import StorageManager as db
+from aura.managers import TaskManager as task
 import json
 
 def parse(items):
@@ -20,10 +20,22 @@ def remove(items):
 
 app = Eve()
 
+@app.route('/commands/possibilities')
+def get_possible_commands():
+    response = task.get_available_commands()
+    return json.dumps(response)
+
+@app.route('/conditions/possibilities')
+def get_possible_conditions():
+    response = task.get_available_conditions()
+    return json.dumps(response)
+
+
 app.on_insert_commands += parse
 app.on_insert_conditions += parse
 app.on_delete_commands += remove
 app.on_delete_conditions += remove
+
 
 if __name__ == '__main__':
     app.run()

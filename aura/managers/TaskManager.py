@@ -34,7 +34,20 @@ available_conditions = """
     PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
     PREFIX auraSense: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraSense#>
 
-    SELECT DISTINCT ?device ?unit ?variable
+    SELECT DISTINCT ?device ?variable
+    WHERE {
+        ?device auraDevice:hasPlatform ?platform .
+  		?platform auraDevice:hasSensor ?sensor .
+        ?sensor auraSense:canMeasure ?variable .
+        ?variable rdf:type auraSense:Variable
+    }"""
+
+available_cont_conditions = """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
+    PREFIX auraSense: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraSense#>
+
+    SELECT DISTINCT ?device ?variable ?unit
     WHERE {
         ?device auraDevice:hasPlatform ?platform .
   		?platform auraDevice:hasSensor ?sensor .
@@ -42,40 +55,64 @@ available_conditions = """
         ?unit auraSense:unitOf ?variable
     }"""
 
+
 available_commands = """
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
-    PREFIX auraSense: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraSense#>
+    PREFIX auraActuate: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraActuate#>
 
     SELECT DISTINCT ?device ?variable
     WHERE {
         ?device auraDevice:hasPlatform ?platform .
-  		?platform auraDevice:hasSensor ?sensor .
-        ?sensor auraSense:canMeasure ?variable.
+  		?platform auraDevice:hasActuator ?actuator .
+        ?actuator auraActuate:changeState ?variable.
+    }"""
+
+available_cont_commands = """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
+    PREFIX auraActuate: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraActuate#>
+
+    SELECT DISTINCT ?device ?variable
+    WHERE {
+        ?device auraDevice:hasPlatform ?platform .
+  		?platform auraDevice:hasActuator ?actuator .
+        ?actuator auraActuate:increases ?variable.
     }"""
 
 conditions_query = graph.make_query(available_conditions)
+conditions_cont_query = graph.make_query(available_cont_conditions)
 commands_query = graph.make_query(available_commands)
+commands_cont_query = graph.make_query(available_cont_commands)
+
 
 def get_available_conditions():
-    result = graph.query(conditions_query)
+    discrete_result = graph.query(conditions_query)
+    continuous_result = graph.query(conditions_cont_query)
     response = {}
-    print("Available conditions:")
     i = 0
-    for row in result:
-        response[i] = {'device':row[0], 'unit':row[1], 'variable':row[2]}
+    for row in discrete_result:
+        response[i] = {'device':row[0], 'variable':row[1]}
         i += 1
+    for row in continuous_result:
+        response[i] = {'device':row[0], 'variable':row[1], 'unit':row[2]}
+        i += 1
+
     return response
 
 
 def get_available_commands():
-    result = graph.query(conditions_query)
+    discrete_result = graph.query(commands_query)
+    continuous_result = graph.query(commands_cont_query)
     response = {}
-    print("Available commands:")
     i = 0
-    for row in result:
+    for row in discrete_result:
         response[i] = {'device':row[0], 'variable':row[1]}
         i += 1
+    for row in continuous_result:
+        response[i] = {'device':row[0], 'variable':row[1]}
+        i += 1
+
     return(response)
 
 
@@ -116,12 +153,16 @@ def test_conditions(measurement):
         print(row[3])#value
 
 
-listen_for_push = Server(port=helpers.ports['task_manager']).pull()
-for msg in listen_for_push:
-    obj = json.loads(msg.decode())
-    if obj['@type'] == 'Measurement':
-        test_conditions(obj)
-        get_available_conditions()
-        get_available_commands()
-    else:
-        print("i don't know what to do with this message")
+def main():
+    listen_for_push = Server(port=helpers.ports['task_manager']).pull()
+    for msg in listen_for_push:
+        obj = json.loads(msg.decode())
+        if obj['@type'] == 'Measurement':
+            test_conditions(obj)
+            get_available_conditions()
+            get_available_commands()
+        else:
+            print("i don't know what to do with this message")
+
+if __name__ == '__main__':
+    main()
