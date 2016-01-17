@@ -5,13 +5,21 @@ client = MongoClient('localhost', 27017)
 db = client['aura']
 
 collections = ['graph','measurements','devices','platforms',
-               'continuous_sensors',
-               'discrete_sensors', 'continuous_actuators', 'conditions',
-               'discrete_actuators', 'units', 'variables', 'commands']
+               'continuous_sensors','discrete_sensors',
+               'continuous_actuators', 'conditions','discrete_actuators',
+               'units', 'variables', 'commands']
+
 
 def get(collection, document_id, key="@id"):
-    result = db[collection].find_one({key:document_id})
-    return result
+    return db[collection].find_one({key:document_id})
+
+
+def find(collection,key,value):
+    return db[collection].find({key:value})
+
+def verify(collection, obj_id):
+    return (get(collection, obj_id) != None)
+
 
 def store(collection, document):
     db[collection].insert(document)

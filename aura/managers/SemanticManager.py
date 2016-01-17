@@ -13,8 +13,8 @@ def get_graph():
         _graph.parse(data=stored_graph['graph'].decode(),format='xml')
     return _graph
 
-def make_query(query_string):
-    return prepareQuery(query_string)
+def make_query(query_string, namespaces):
+    return prepareQuery(query_string, initNs=namespaces)
 
 
 def query(query_string, bindings=None):
