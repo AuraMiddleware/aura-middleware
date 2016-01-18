@@ -9,8 +9,13 @@ setup(name='AuraMiddleware',
       install_requires=[
           'zeroless',
           'paho-mqtt',
+          'pymongo',
+          'eve',
       ],
       entry_points = {
-        'console_scripts': ['aura=aura.aura_worker:main'],
+        'console_scripts': ['auraBroker=aura.aura_broker:main',
+                            'auraDev=aura.managers.DeviceManager:main',
+                            'auraTask=aura.managers.TaskManager:main',
+                            ],
       }
       )

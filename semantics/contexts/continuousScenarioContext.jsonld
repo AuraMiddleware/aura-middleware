@@ -1,9 +1,0 @@
-{
-  "scenario":"localhost/SarmiotScenario#",
-  "ContinuousScenario":"scenario:ContinuousScenario",
-  "maxValue":"scenario:Range:MaxValue",
-  "minValue":"scenario:Range:MinValue",
-  "scenario:enforces":{
-      "@type":"@id"
-  }
-}
