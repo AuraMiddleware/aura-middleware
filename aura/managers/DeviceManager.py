@@ -3,6 +3,7 @@ from aura.managers import SemanticManager as graph
 from zeroless import (Client, Server)
 from aura.managers import helpers
 import json
+import sys
 
 zmq_broker = Client()
 zmq_broker.connect_local(port=helpers.ports['broker'])
@@ -32,63 +33,64 @@ def send_command(device, command):
     #DeviceManager -> Gateway
     print("send_command")
 
-listen_for_push = Server(port=helpers.ports['device_manager']).pull()
-for msg in listen_for_push:
-    obj = json.loads(msg.decode())
-    #Measurement
-    if obj['@type'] == 'Measurement':
-        if verify('devices', obj['dev:wasMeasuredBy']):
-            create('measurements', obj)
-            push_to_task(msg)
-        else:
-            notify_unknown_object('Device', obj['dev:wasMeasuredBy'])
-    #Device
-    elif obj['@type'] == 'Device':
-        if verify('platforms', obj['dev:hasPlatform']):
-            create('devices', obj)
-        else:
-            notify_unknown_object('Platform', obj['dev:hasPlatform'])
-    #Platform
-    elif obj['@type'] == 'Platform':
-        if verify('continuous_sensors', obj['dev:hasSensor']) or\
-                verify('discrete_sensors', obj['dev:hasSensor']):
-            if verify('continuous_actuators', obj['dev:hasActuator']) or\
-                    verify('discrete_actuators', obj['dev:hasActuator']):
-                create('platforms', obj)
+def main():
+    listen_for_push = Server(port=helpers.ports['device_manager']).pull()
+    for msg in listen_for_push:
+        obj = json.loads(msg.decode())
+        #Measurement
+        if obj['@type'] == 'Measurement':
+            if verify('devices', obj['dev:wasMeasuredBy']):
+                create('measurements', obj)
+                push_to_task(msg)
             else:
-                notify_unknown_object('Actuator', obj['dev:hasActuator'])
-        else:
-            notify_unknown_object('Sensor', obj['dev:hasSensor'])
-    #ContinuousSensor
-    elif obj['@type'] == 'ContinuousSensor':
-        if verify('units', obj['sense:canMeasure']):
-            create('continuous_sensors', obj)
-        else:
-            notify_unknown_object('Unit', obj['sense:canMeasure'])
-    #DiscreteSensor
-    elif obj['@type'] == 'DiscreteSensor':
-        if verify('variables', obj['sense:canMeasure']):
-            create('discrete_sensors', obj)
-        else:
-            notify_unknown_object('Variable', obj['sense:canMeasure'])
-    #ContinuousActuator
-    elif obj['@type'] == 'ContinuousActuator':
-        if verify('variables', obj['actuator:increases']):
-            create('continuous_actuators', obj)
-        else:
-            notify_unknown_object('Variable', obj['actuator:increases'])
-    #DiscreteActuator
-    elif obj['@type'] == 'DiscreteActuator':
-        if verify('variables', obj['actuator:changeState']):
-            create('discrete_actuators', obj)
-        else:
-            notify_unknown_object('Variable', obj['actuator:changeState'])
-    #Unit
-    elif obj['@type'] == 'Unit':
-        if verify('variables', obj['sense:unitOf']):
-            create('units', obj)
-        else:
-            notify_unknown_object('Variable', obj['sense:unitOf'])
-    #Variable
-    elif obj['@type'] == 'Variable':
-        create('variables', obj)
+                notify_unknown_object('Device', obj['dev:wasMeasuredBy'])
+        #Device
+        elif obj['@type'] == 'Device':
+            if verify('platforms', obj['dev:hasPlatform']):
+                create('devices', obj)
+            else:
+                notify_unknown_object('Platform', obj['dev:hasPlatform'])
+        #Platform
+        elif obj['@type'] == 'Platform':
+            if verify('continuous_sensors', obj['dev:hasSensor']) or\
+                    verify('discrete_sensors', obj['dev:hasSensor']):
+                if verify('continuous_actuators', obj['dev:hasActuator']) or\
+                        verify('discrete_actuators', obj['dev:hasActuator']):
+                    create('platforms', obj)
+                else:
+                    notify_unknown_object('Actuator', obj['dev:hasActuator'])
+            else:
+                notify_unknown_object('Sensor', obj['dev:hasSensor'])
+        #ContinuousSensor
+        elif obj['@type'] == 'ContinuousSensor':
+            if verify('units', obj['sense:canMeasure']):
+                create('continuous_sensors', obj)
+            else:
+                notify_unknown_object('Unit', obj['sense:canMeasure'])
+        #DiscreteSensor
+        elif obj['@type'] == 'DiscreteSensor':
+            if verify('variables', obj['sense:canMeasure']):
+                create('discrete_sensors', obj)
+            else:
+                notify_unknown_object('Variable', obj['sense:canMeasure'])
+        #ContinuousActuator
+        elif obj['@type'] == 'ContinuousActuator':
+            if verify('variables', obj['actuator:increases']):
+                create('continuous_actuators', obj)
+            else:
+                notify_unknown_object('Variable', obj['actuator:increases'])
+        #DiscreteActuator
+        elif obj['@type'] == 'DiscreteActuator':
+            if verify('variables', obj['actuator:changeState']):
+                create('discrete_actuators', obj)
+            else:
+                notify_unknown_object('Variable', obj['actuator:changeState'])
+        #Unit
+        elif obj['@type'] == 'Unit':
+            if verify('variables', obj['sense:unitOf']):
+                create('units', obj)
+            else:
+                notify_unknown_object('Variable', obj['sense:unitOf'])
+        #Variable
+        elif obj['@type'] == 'Variable':
+            create('variables', obj)
