@@ -15,7 +15,7 @@ Using Aura, a developer is provided with a RESTful API through which is possible
 
 ### License
 
-Copyright 2016 Vinícius M. S. Fraga vinicius.vmsf@gmail.com
+Copyright 2016 Vinícius M. S. Fraga <vinicius.vmsf@gmail.com>
 
 Aura Middleware is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
