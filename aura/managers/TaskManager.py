@@ -31,8 +31,8 @@ def send_command(device, command):
 
 available_conditions = """
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
-    PREFIX auraSense: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraSense#>
+    PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/aura_semantics/master/semantics/ontologies/AuraDevice#>
+    PREFIX auraSense: <https://raw.githubusercontent.com/viniciusmsfraga/aura_semantics/master/semantics/ontologies/AuraSense#>
 
     SELECT DISTINCT ?device ?variable
     WHERE {
@@ -44,8 +44,8 @@ available_conditions = """
 
 available_cont_conditions = """
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
-    PREFIX auraSense: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraSense#>
+    PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/aura_semantics/master/semantics/ontologies/AuraDevice#>
+    PREFIX auraSense: <https://raw.githubusercontent.com/viniciusmsfraga/aura_semantics/master/semantics/ontologies/AuraSense#>
 
     SELECT DISTINCT ?device ?variable ?unit
     WHERE {
@@ -58,8 +58,8 @@ available_cont_conditions = """
 
 available_commands = """
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
-    PREFIX auraActuate: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraActuate#>
+    PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/aura_semantics/master/semantics/ontologies/AuraDevice#>
+    PREFIX auraActuate: <https://raw.githubusercontent.com/viniciusmsfraga/aura_semantics/master/semantics/ontologies/AuraActuate#>
 
     SELECT DISTINCT ?device ?variable
     WHERE {
@@ -70,8 +70,8 @@ available_commands = """
 
 available_cont_commands = """
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
-    PREFIX auraActuate: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraActuate#>
+    PREFIX auraDevice: <https://raw.githubusercontent.com/viniciusmsfraga/aura_semantics/master/semantics/ontologies/AuraDevice#>
+    PREFIX auraActuate: <https://raw.githubusercontent.com/viniciusmsfraga/aura_semantics/master/semantics/ontologies/AuraActuate#>
 
     SELECT DISTINCT ?device ?variable
     WHERE {
@@ -127,8 +127,8 @@ def test_conditions(measurement):
 
     conditions_str = """
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX auraTask: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraTask#>
-    PREFIX auraDev: <https://raw.githubusercontent.com/viniciusmsfraga/auramiddleware/master/semantics/ontologies/AuraDevice#>
+    PREFIX auraTask: <https://raw.githubusercontent.com/viniciusmsfraga/aura_semantics/master/semantics/ontologies/AuraTask#>
+    PREFIX auraDev: <https://raw.githubusercontent.com/viniciusmsfraga/aura_semantics/master/semantics/ontologies/AuraDevice#>
     PREFIX variable: <"""+var_str+""">
     PREFIX measurement: <"""+measurement_str+""">
 
