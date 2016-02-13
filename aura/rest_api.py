@@ -20,10 +20,12 @@ def remove(items):
 
 app = Eve()
 
+
 @app.route('/commands/possibilities')
 def get_possible_commands():
     response = task.get_available_commands()
     return json.dumps(response)
+
 
 @app.route('/conditions/possibilities')
 def get_possible_conditions():

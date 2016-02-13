@@ -6,6 +6,7 @@ from aura.managers import StorageManager as db
 
 store = plugin.get('IOMemory', Store)()
 
+
 def get_graph():
     _graph = Graph(store)
     stored_graph = db.get('graph','graph','id')
@@ -25,8 +26,8 @@ def make_query(query_string, namespaces=None):
 
 def query(query_string, bindings=None):
     _graph = get_graph()
-    return _graph.query(query_string, initBindings=bindings)
-
+    result = _graph.query(query_string, initBindings=bindings)
+    return result
 
 def parse(data_string):
     _graph = get_graph()
