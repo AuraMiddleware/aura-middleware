@@ -159,8 +159,6 @@ def main():
         obj = json.loads(msg.decode())
         if obj['@type'] == 'Measurement':
             test_conditions(obj)
-            get_available_conditions()
-            get_available_commands()
         else:
             print("i don't know what to do with this message")
 
