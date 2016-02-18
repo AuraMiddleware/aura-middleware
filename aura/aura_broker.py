@@ -1,27 +1,35 @@
 #!/usr/bin/env python3
 
+import argparse
 import paho.mqtt.client as mqtt
 from aura.managers import helpers
 from zeroless import Client, Server
 
+
 zmq_client = Client()
 zmq_client.connect_local(port=helpers.ports['device_manager'])
-push = zmq_client.push()
+zmq_push = zmq_client.push()
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
     client.subscribe("gateways/test")
 
+
 def on_message(client, userdata, msg):
-    #print("sending to DeviceManager")
-    push(msg.payload)
+    zmq_push(msg.payload)
+
+
+#Command line arguments
+parser = argparse.ArgumentParser()
+parser.add_argument("mqtt_broker_ip")
+parser.add_argument("mqtt_port", type=int)
+args = parser.parse_args()
 
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.connect("localhost", 1885, 60)
-client.publish("gateways/broker", "hi")
+client.connect(args.mqtt_broker_ip, args.mqtt_port, 60)
 
 #Listen for gateways' MQTT messages
 client.loop_start()

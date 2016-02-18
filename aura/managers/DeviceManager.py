@@ -3,7 +3,6 @@ from aura.managers import SemanticManager as graph
 from zeroless import (Client, Server)
 from aura.managers import helpers
 import json
-import sys
 
 zmq_broker = Client()
 zmq_broker.connect_local(port=helpers.ports['broker'])
