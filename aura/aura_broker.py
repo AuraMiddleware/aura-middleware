@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
-import argparse
+from os import environ
 import paho.mqtt.client as mqtt
 from aura.managers import helpers
 from zeroless import Client, Server
 
+
+mqtt_broker_ip = environ['MQTT_BROKER_IP']
+mqtt_port = int(environ['MQTT_PORT'])
 
 zmq_client = Client()
 zmq_client.connect_local(port=helpers.ports['device_manager'])
@@ -19,17 +22,11 @@ def on_message(client, userdata, msg):
     zmq_push(msg.payload)
 
 
-#Command line arguments
-parser = argparse.ArgumentParser()
-parser.add_argument("mqtt_broker_ip")
-parser.add_argument("mqtt_port", type=int)
-args = parser.parse_args()
-
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.connect(args.mqtt_broker_ip, args.mqtt_port, 60)
+client.connect(mqtt_broker_ip, mqtt_port, 60)
 
 #Listen for gateways' MQTT messages
 client.loop_start()

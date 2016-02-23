@@ -93,3 +93,5 @@ def main():
         #Variable
         elif obj['@type'] == 'Variable':
             create('variables', obj)
+
+main()
