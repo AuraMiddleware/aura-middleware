@@ -3,7 +3,7 @@
 Aura Middleware is a semantic middleware for the Internet of Things. Its main objective is:
 
 > To facilitate the development of IoT applications by abstracting the
-differences among devices, making then work together in a soft and easy manner.
+differences among devices, making them work together in a soft and easy manner.
 
 Aura, from latin, means *breeze*. A developer using Aura to manage IoT devices should feel it like breeze to develop applications to many different devices and technologies: soft, tranquil.
 
